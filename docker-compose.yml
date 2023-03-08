@@ -2,6 +2,7 @@ version: "3"
 
 services:
   app:
+    image: kazakovanton/devops-for-programmers-project-74
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.production

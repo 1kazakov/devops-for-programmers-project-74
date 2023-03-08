@@ -34,7 +34,7 @@ jobs:
           tags: ${{ env.TEST_TAG }}
 
       # Запуск тестов, команда запуска зависит от стека
-      - run: docker-compose -f docker-compose.yml run app npm run test
+      - run: make compose-test
       # Здесь же нужно настроить запуск линтера
 
       # Заливаем протестированный образ на Docker Hub

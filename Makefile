@@ -7,3 +7,6 @@ dev:
 install: 
 	docker-compose run --rm app npm ci
 
+compose-test:
+	docker-compose -f docker-compose.yml run app npm run test
+

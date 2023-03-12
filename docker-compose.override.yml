@@ -10,3 +10,14 @@ services:
       - 8080:8080
     volumes:
       - "./app:/app"
+
+  caddy:
+    build:
+      context: .
+      dockerfile: services/caddy/Dockerfile
+    volumes:
+      - .:/app
+      - ./services/caddy/Caddyfile:/etc/caddy/Caddyfile
+    ports:
+      - 80:80
+      - 443:443

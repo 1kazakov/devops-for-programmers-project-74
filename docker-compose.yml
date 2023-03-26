@@ -6,3 +6,10 @@ services:
       context: .
       dockerfile: Dockerfile.production
     image: kazakovanton/devops-for-programmers-project-74
+    depends_on:
+      - db
+  db:
+    image: postgres:latest
+    restart: always
+    env_file: .env
+

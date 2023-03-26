@@ -10,3 +10,5 @@ install:
 compose-test:
 	docker-compose -f docker-compose.yml run app npm run test
 
+ci:
+	docker-compose -f docker-compose.yml run app npm run test

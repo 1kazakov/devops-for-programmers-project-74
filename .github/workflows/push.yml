@@ -35,7 +35,6 @@ jobs:
 
       # Запуск тестов, команда запуска зависит от стека
       - run: docker-compose -f docker-compose.yml run app npm run test
-      # Здесь же нужно настроить запуск линтера
 
       # Заливаем протестированный образ на Docker Hub
       # https://github.com/docker/build-push-action/blob/master/docs/advanced/test-before-push.md
